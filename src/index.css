@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('non.geist');
+@import url('non.geist/mono');
+
+/* index.css */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #061927;
+  font-family: 'Geist Variable';
+  color: #E3EEFC;
+}
+
+
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes scroll-move {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  100% {
+    transform: translate(100vw, 100vh) rotate(360deg) scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-floating {
+  animation: floating 5s ease-in-out infinite;
+}
+
+.animate-scroll-move {
+  animation: scroll-move 5s forwards;
+}
+
+h1 {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+
